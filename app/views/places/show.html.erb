@@ -1,25 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
+<h1><%= @place["name"] %></h1>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <h1>
-    <%= @place["name"] %>
-  </h1>
-
-  <p> 
-    <br> Things I did when I was there will appear in Part 2 <br>
-  </p>  
-
-  <p>
-    <br><br>
-    <a href="/places">Back to all Places</a>
-  </p> 
-
-</body>
-
-</html>
+<p>
+<br>
+<% for entry in @entries%>
+<li>
+    <%= entry["title"]%>
+  <br>
+  <%= entry["description"]%>
+  <br>
+  <%= entry["posted_on"]%>
+  <br>
+  <br>
+<% end %>
+</p>
+<br><br>
+<a href="/entries/new?place_id=<%=@place["id"]%>">New Post</a>
+<br><br>
+<a href="/places">Back to all Places</a>

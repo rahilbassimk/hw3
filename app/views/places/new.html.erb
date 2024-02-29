@@ -1,31 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
+<h1>New Place</h1>
 
-<body>
+<form action="/places" method = "post">
+<p>
+  <label for ="name">Name</label>
+  <input type ="text" name="name" id="name">
+<button>Submit</button>
+<br><br>
+<a href="/places">Back to all Places</a>
 
-  <h1>Add a new place you visited</h1>
-
-    <form action="/places" method="post">
-      
-      <p>
-        <label for="name">Name</label>
-        <input type="text" name="name" id="name">
-      </p>
-
-      <button>Submit</button>
-
-    </form>
-
-  <p>
-    <br><br>
-    <a href="/places">Back to all Places</a>
-  </p>  
-
-</body>
-
-</html>
+</form>
